@@ -5,7 +5,7 @@ export default function HomePage() {
             {/* Hero Section */}
             <section className="container mx-auto px-4 py-20 md:py-32 text-center">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                    Solusi Teknologi untuk <span className="text-[#DBE2EF]">Masa Depan</span>
+                    Solusi Teknologi untuk <span className="text-[#00000]">Masa Depan</span>
                 </h1>
                 <p className="text-lg md:text-xl text-white max-w-2xl mx-auto mb-10">
                     Kami membantu bisnis berkembang dengan layanan pengembangan web, mobile, dan sistem informasi terbaik di Indonesia.
