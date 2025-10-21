@@ -21,7 +21,7 @@ export default function RootLayout({
                 {/* Navbar */}
                 <nav className="bg-[#3F72AF] text-white shadow-md">
                     <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-                        <div className="text-xl font-bold">TechNova</div>
+                        <div className="text-xl font-bold">Kelompok 5</div>
                         <div className="hidden md:flex space-x-6">
                             <a href="/" className="hover:text-[#DBE2EF] transition">Home</a>
                             <a href="/about" className="hover:text-[#DBE2EF] transition">About</a>
@@ -53,13 +53,13 @@ export default function RootLayout({
                 {/* Footer */}
                 <footer className="bg-[#3F72AF] text-white py-6">
                     <div className="container mx-auto px-4 text-center">
-                        <p className="text-lg font-semibold">TechNova Solutions</p>
+                        <p className="text-lg font-semibold">Kelompok 5 Solutions</p>
                         <p className="mt-2 text-gray-300">
-                            Jl. Teknologi No. 123, Jakarta, Indonesia<br />
+                            Politeknik Astra, TRPL 2A, Delta Silicon, Indonesia<br />
                             Email: info@technova.id | Phone: +62 21 1234 5678
                         </p>
                         <p className="mt-4 text-sm text-gray-400">
-                            © {new Date().getFullYear()} TechNova. All rights reserved.
+                            © {new Date().getFullYear()} Kelompok 5. All rights reserved.
                         </p>
                     </div>
                 </footer>
