@@ -27,3 +27,27 @@
   color: #5f6368;
   letter-spacing: 0.25px;
 }
+
+.search-container {
+  flex-grow: 1; /* Membuat container mengambil sisa ruang */
+  display: flex;
+  justify-content: center; /* Pusatkan input di tengah */
+}
+
+.search-input {
+  width: 100%;
+  max-width: 720px; /* Batasi lebar maksimum input */
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #f1f3f4;
+  outline: none;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.search-input:focus {
+  background-color: #fff;
+  border-color: #fbc02d;
+  box-shadow: 0 0 0 1px #fbc02d;
+}

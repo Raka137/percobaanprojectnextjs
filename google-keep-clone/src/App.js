@@ -7,6 +7,10 @@ import "./App.css";
 function App() {
   const [notes, setNotes] = useState([]);
 
+  // === BAGIAN BARU: State untuk Pencarian ===
+  const [searchTerm, setSearchTerm] = useState("");
+  // === AKHIR BAGIAN BARU ===
+
   useEffect(() => {
     const savedNotes = localStorage.getItem("keepNotes");
     if (savedNotes) {
@@ -36,13 +40,26 @@ function App() {
     setNotes(notes.filter((note) => note.id !== id));
   };
 
+  // === BAGIAN BARU: Logika untuk memfilter catatan ===
+  // Variabel ini akan berisi catatan yang sudah difilter atau semua catatan jika searchTerm kosong
+  const filteredNotes = notes.filter(
+    (note) =>
+      note.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      note.content.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  // === AKHIR BAGIAN BARU ===
+
   return (
     <div className="app">
-      <Header />
+      {/* Kirim state pencarian sebagai props ke Header */}
+      <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+
       <main className="app-main">
         <NoteForm addNote={addNote} />
+
+        {/* Gunakan filteredNotes (bukan notes) untuk ditampilkan di NotesList */}
         <NotesList
-          notes={notes}
+          notes={filteredNotes}
           updateNote={updateNote}
           deleteNote={deleteNote}
         />
